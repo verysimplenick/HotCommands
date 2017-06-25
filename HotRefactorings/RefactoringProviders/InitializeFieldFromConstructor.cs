@@ -58,7 +58,7 @@ namespace HotCommands
 
         private static IEnumerable<ConstructorDeclarationSyntax> GetConstructors(VariableDeclaratorSyntax fieldVariable)
         {
-            var classDeclaration = fieldVariable.Ancestors().OfType<ClassDeclarationSyntax>().SingleOrDefault();
+            var classDeclaration = fieldVariable.Ancestors().OfType<ClassDeclarationSyntax>().FirstOrDefault();
 
             if (classDeclaration == null)
             {
